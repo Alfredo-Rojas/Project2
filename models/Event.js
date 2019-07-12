@@ -1,25 +1,26 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
-const EventSchema = new Schema ({
-  name: String,
+const EventsSchema = new Schema ({
+  name: {type: String},
   location: {
-    streetAddress,
-    city,
-    state,
-    country
+    streetAddress : {type: String },
+    city: {type: String},
+    state: {type: String},
+    country: {type: String}
   },
-  participants: [],
-  type: String,
-  description: String,
-  image: URL,
-  checkin: [],
-  leftEvent: [],
+  participants: [{type: Schema.Types.ObjectId , ref: 'User'}],
+  type: {type: String},
+  description: {type: String},
+  image: {type: String},
+  checkin: [{type: Schema.Types.ObjectId , ref: 'User'}],
+  leftEvents: [{type: Schema.Types.ObjectId , ref: 'User'}],
   comments: [{
-    owner,
-    comments
+    owner: {type: Schema.Types.ObjectId, ref: 'User'},
+    comments : {type: String},
+    timestamp: {type: Date}
   }],
-  time: Date 
+  time: {type: Date} 
 });
 
-module.exports = mongoose.model('Event', EventSchema);
+module.exports = mongoose.model('Events', EventsSchema);
