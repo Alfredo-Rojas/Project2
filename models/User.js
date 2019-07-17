@@ -2,10 +2,13 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const UserSchema = new Schema ({
-  username: {type: String},
+  username: {type: String, unique: true},
   password: {type: String},
-  eventCreated: [{type: Schema.Types.ObjectId , ref: 'Event'}],
-  eventGoing: [{type: Schema.Types.ObjectId , ref: 'Event'}]
+  eventCreated: [{type: Schema.Types.ObjectId , ref: 'Events'}],
+  eventGoing: [{type: Schema.Types.ObjectId , ref: 'Events'}],
+  id: {type: String}
 });
+
+
 
 module.exports = mongoose.model('User', UserSchema);

@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const EventsSchema = new Schema ({
-  name: {type: String},
+  title: {type: String},
   location: {
     streetAddress : {type: String },
     city: {type: String},
