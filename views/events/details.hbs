@@ -1,0 +1,37 @@
+<h2> Details for Event </h2>
+
+
+
+
+<div>
+  <h3>{{theEvent.title}}</h3>
+  <p>{{theEvent.description}}</p>
+
+
+  <div>
+    <form action="/events/checkin/{{theEvent._id}}" method="POST"><button>Checkin</button></form>
+    <h4> Checkin List </h4>
+    {{#if hasCheckin}}
+      <ul>
+        {{#each theEvent.checkin}}
+          <li>{{this.username}}</li>
+        {{/each}}
+      </ul>
+    {{/if}}
+  </div>
+
+  <div>
+    <form action="/events/checkout/{{theEvent._id}}" method="POST"><button>Checkout</button></form>
+    <h4> Checkout List </h4>
+    {{#if hasCheckout}}
+        <ul>
+          {{#each theEvent.leftEvents}}
+            <li>{{this.username}}</li>
+          {{/each}}
+        </ul>
+    {{/if}}
+  </div>
+
+
+
+</div>

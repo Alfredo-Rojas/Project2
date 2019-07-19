@@ -9,6 +9,7 @@ const EventsSchema = new Schema ({
     state: {type: String},
     country: {type: String}
   },
+  owner: {type: Schema.Types.ObjectId, ref: "User"},
   participants: [{type: Schema.Types.ObjectId , ref: 'User'}],
   type: {type: String},
   description: {type: String},

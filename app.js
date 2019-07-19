@@ -9,10 +9,10 @@ const mongoose     = require('mongoose');
 const logger       = require('morgan');
 const path         = require('path');
 
-const bcrypt  = require('bcryptjs');
 const User    = require('./models/User');
-const session = require("express-session");
+const bcrypt  = require('bcryptjs');
 const passport = require('passport');
+const session = require("express-session");
 const LocalStrategy = require("passport-local").Strategy;
 
 const flash = require("connect-flash");
@@ -22,8 +22,8 @@ const GoogleStrategy = require("passport-google-oauth").OAuth2Strategy;
 
 
 mongoose
-  .connect(process.env.MONGODB_URI)
-  // .connect('mongodb://localhost/project2', {useNewUrlParser: true})
+  // .connect(process.env.MONGODB_URI)
+  .connect('mongodb://localhost/project2', {useNewUrlParser: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })

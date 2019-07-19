@@ -27,6 +27,12 @@ router.post('/logout', (req, res, next)=>{
   res.redirect('/user/login');
 });
 
+///////////////////////
+//Get user profile
+router.get('/profile', (req, res, next) => {
+  res.render('user/profile');
+});
+
 ////////////////////////
 //Get register page
 router.get('/register', (req, res, next) => {

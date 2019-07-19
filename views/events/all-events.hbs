@@ -1,11 +1,13 @@
 {{#each errors}}
+<h3>{{this}}</h3>
+{{/each}}
 <div class="row">
   {{#each events}}
 <div class="col-md-3">
   <div class="card">
     <div class="card-body">
       <h4 class="card-title d-flex justify-content-between align-items-center">
-        {{ title }} <a href="/events/edit/{{_id}}"><i class="fas fa-edit"></i></a>
+        <a href="/events/details/{{_id}}">{{ title }}</a> <a href="/events/edit/{{_id}}"><i class="fas fa-edit"></i></a>
       </h4>
       <p>{{ description }}</p>
       {{!-- Delete request --}}
@@ -16,12 +18,13 @@
     </div>
   </div>
 </div>
+{{/each}}
 </div>
-  {{else}}
+  {{!-- {{else}}
   <div class="card mx-auto">
     <div class="card-body">
       <h1>Hello {{user.name}}</h1>
       <p class="lead">The are not Events, right now!</p>
       <a href="/events/add" class="btn btn-success btn-block">Create One!</a>
     </div>
-  </div>
+  </div> --}}
