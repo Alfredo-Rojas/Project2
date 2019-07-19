@@ -1,56 +1,19 @@
 
-<div class="col-md-4 mx-auto">
-  <div class="card text-center">
-    <div class="card-header">
-      <h3>New Event</h3>
+    <div class="card img-card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="/images/Event-img.jpg">
     </div>
-    <div class="card-body">
-      <form action="/events/new-event" method="POST">
-        <div class="form-group">
-          <input type="text" name="title" class="form-control" placeholder="Title" autofocus/>
-        </div>
-        {{!-- <div class="form-group">
-          <label for="image">Choose your Event image:</label>
-          <input type="file" id="image" name="image" accept="image/png, image/jpeg"> 
-        </div> --}}
-        <div class="form-group">
-          <textarea name="description" class="form-control" placeholder="Description"></textarea>
-        </div>
-        <div class="form-group">
-          <button class="btn btn-primary btn-block" type="submit">
-            Save
-          </button>
-        </div>
-      </form>
-    </div>
+    <div class="card-content">
+        <form action="/events/new-event" method="POST">
+        <span class="card-title activator grey-text text-darken-4"><input type="text" name="title" class="form-control" placeholder="Title" autofocus/><i class="material-icons right">more_vert</i></span>
+        <button class="btn red lighten-1 btn-block" type="submit">Save</button>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4"><input type=" name="Category" placeholder="Category" autofocus/><i class="material-icons right">close</i></span>
+        <textarea name="description" class="form-control" placeholder="Description" cols="30" rows="10"></textarea>
+      </div>
+    </form>
   </div>
-</div>
+          
 
-{{!-- <div class="_5r7f _17bk _4x41 _1z90 _2__g _3gjq"
-  style="background-image: url(https://scontent-mia3-2.xx.fbcdn.net/v/t39.8562-6/61942524_2263422547250969_1834020820020625408_n.jpg?_nc_cat=109&amp;_nc_oc=AQkcAHmjUBYvy_xi0RIjOVc6COzetFntNxMBu1HnG0aeqlFsVYLJ75lmL-ZYk5nun7Y&amp;_nc_ht=scontent-mia3-2.xx&amp;oh=ee34e7fd02a89e25baf443daa96dd366&amp;oe=5DB8A593)"
-  id="cannes">
-  <div class="_4x42">
-    <div class="__sw _5xtx _5xty __ta _2k8j">
-      <div class="_4x44">
-        <h4 class="_3tmt _7ovr _5j3- _7n51 _34g8 _4x45 _4x46" style="color:white"><abbr title="June 17, 2019">June 17,
-            2019</abbr></h4>
-        <div style="color:white" class="_38io _5j3- _7oxw _30jd _7oyd">
-          <p style="color:white" class="_5yvq">Cannes Lions 2019</p>
-        </div>
-      </div>
-      <h2 class="_3tmr _7oxu _1m1h _2t6c _5kal _7n4_ _34g8" style="color:white"><a class="_3cr5 _5j3- _53m5 _7p5k _1s6c"
-          style="color:white" href="/business/events/cannes"
-          data-ms="{&quot;creative&quot;:&quot;link&quot;,&quot;creative_detail&quot;:&quot;c18_title&quot;}"
-          id="u_y_1">Celebrate Storytelling and Creativity with <span class="_9xg">Facebook</span></a></h2>
-      <div style="color:white" class="_38io _5j3- _7oxw _30jd _7oyd">
-        <p style="color:white" class="_5yvq">Storytelling and creativity are more important than ever for building
-          community, connections, and growth. At Cannes Lions, we'll explore the opportunities for great storytelling
-          and creative expression on our platforms, and we'll celebrate the many communities moving the industry
-          forward. Check out all our sessions and installations at the Facebook beach. </p>
-      </div>
-    </div><a role="button" class="_42ft _2qix _3bn- _w1i _5j3- _inf _1yrg _-k6" href="/business/events/cannes" style=""
-      data-ms="{&quot;creative&quot;:&quot;button&quot;,&quot;creative_detail&quot;:&quot;c18&quot;}" id="u_y_2">See the
-      Schedule</a>
-  </div>
-</div> --}}
 

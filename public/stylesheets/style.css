@@ -19,7 +19,7 @@ body {
 
 .container {
   min-height: 85vh;
-  color: #ef5350; }
+  color: #ef9a9a; }
 
 .fab-gl i {
   margin-right: 40px; }
@@ -29,5 +29,8 @@ body {
 
 .nav-wrapper {
   margin: 0 40px; }
+
+.img-card {
+  width: 500px !important; }
 
 /*# sourceMappingURL=style.css.map */
